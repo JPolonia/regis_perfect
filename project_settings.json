@@ -1,0 +1,29 @@
+{
+  "project_name": "regis_perfect",
+  "stages": {
+    "stable": {
+      "name": "stable",
+      "host": "regis_perfect",
+      "user": "django",
+      "git_branch": "master",
+      "code_src_directory": "/home/django/django",
+      "requirements_file": "requirements/production.txt",
+      "venv_directory": "/home/django/.virtualenvs/django",
+      "restart_command": "sudo supervisorctl restart django-python-wsgi-2"
+    },
+    "development": {
+      "name": "stage",
+      "host": "",
+      "user": "",
+      "git_branch": "",
+      "code_src_directory": "",
+      "requirements_file": "",
+      "venv_directory": "",
+      "restart_command": ""
+    }
+  },
+  "local": {
+    "code_src_directory": "~/Workspace/dev/regis_perfect",
+    "venv_python_executable": "~/.virtualenvs/regis_perfect/bin/python"
+  }
+}
