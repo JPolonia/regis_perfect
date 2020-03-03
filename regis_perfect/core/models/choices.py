@@ -100,3 +100,58 @@ class BangsSize(Choice):
     class Meta:
         verbose_name = _('Tamanho da franja')
         verbose_name_plural = _('Tamanhos da franja')
+
+
+# Asthetics
+class AestheticsType(Choice):
+    class Meta:
+        verbose_name = _('Tipo de serviço')
+        verbose_name_plural = _('Tipos de serviço')
+
+class EpilationProduct(Choice):
+    class Meta:
+        verbose_name = _('Epilação produto')
+        verbose_name_plural = _('Epilação produtos')
+
+
+class EpilationZones(Choice):
+    class Meta:
+        verbose_name = _('Epilação zona')
+        verbose_name_plural = _('Epilação zonas')
+
+
+class Massage(Choice):
+    class Meta:
+        verbose_name = _('Massagem')
+        verbose_name_plural = _('Massagens')
+
+
+class SkinType(Choice):
+    class Meta:
+        verbose_name = _('Tipo de pele')
+        verbose_name_plural = _('Tipos de pele')
+
+
+class BodyTreatment(Choice):
+    class Meta:
+        verbose_name = _('Tratamento de corpo')
+        verbose_name_plural = _('Tratamentos de corpo')
+
+
+class ManicureService(Choice):
+    class Meta:
+        verbose_name = _('Manicure serviço')
+        verbose_name_plural = _('Manicure serviços')
+
+
+class ManicureProduct(Choice):
+    class Meta:
+        verbose_name = _('Manicure produto')
+        verbose_name_plural = _('Manicure produtos')
+
+
+class ManicureColor(Choice):
+    class Meta:
+        verbose_name = _('Manicure cor')
+        verbose_name_plural = _('Manicure cores')
+

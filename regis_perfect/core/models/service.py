@@ -103,3 +103,34 @@ class FemaleHaircut(Service):
     class Meta:
         verbose_name = _('Corte Feminino')
         verbose_name_plural = _('Corte Feminino')
+
+
+class Aesthetics(Service):
+    '''
+    tipo de serviço - epilação cera,  tratamento de corpo, tratamentos de rosto, pedicure/manicure,
+    epilação - produto/cera ( fria, quente, chocolate…), zonas tratadas perna, virilha, buço ...
+    massagem- (relaxamento ou terapêutica, anti celulitica, linfática, +)
+    tratamentos de rosto- tratamento(limpeza de pele, piling…)
+    tipo de pele ( oleosa, normal, mista, seca, acneica…)
+    tratamentos de corpo -tratamento( esfoliação, envolvimentos.) tipo de pele(seca, oleosa ou normal)
+    manicure/pedicure- serviço (verniz gel,manicure…), produto (gel, verniz gel, acrílico), número/ nome cor
+    campo para observações escritas em tratamentos para colocar os produtos e técnicas usadas
+    '''
+    type = models.ForeignKey(AestheticsType, verbose_name=_('Tipo de serviço'), on_delete=models.PROTECT, null=True, blank=True)
+    epilation_product = models.ForeignKey(EpilationProduct, verbose_name=_('Epilação produto'), on_delete=models.PROTECT, null=True, blank=True)
+    epilation_zones = models.ForeignKey(EpilationZones, verbose_name=_('Epilação zonas tratadas'), on_delete=models.PROTECT, null=True, blank=True)
+    massage = models.ForeignKey(Massage, verbose_name=_('Massagem'), on_delete=models.PROTECT, null=True, blank=True)
+    skin_type = models.ForeignKey(SkinType, verbose_name=_('Tipo de pele'), on_delete=models.PROTECT, null=True, blank=True)
+    body_treatment = models.ForeignKey(BodyTreatment, verbose_name=_('Tratamentos de corpo'), on_delete=models.PROTECT, null=True, blank=True)
+    manicure_service = models.ForeignKey(ManicureService, verbose_name=_('Manicure serviço'), on_delete=models.PROTECT, null=True, blank=True)
+    manicure_product = models.ForeignKey(ManicureProduct, verbose_name=_('Manicure produto'), on_delete=models.PROTECT, null=True, blank=True)
+    manicure_color = models.ForeignKey(ManicureColor, verbose_name=_('Manicure cor'), on_delete=models.PROTECT, null=True, blank=True)
+    pedicure_service = models.ForeignKey(ManicureService, verbose_name=_('Pedicure serviço'), on_delete=models.PROTECT, related_name='pedicure', null=True, blank=True)
+    pedicure_product = models.ForeignKey(ManicureProduct, verbose_name=_('Pedicure produto'), on_delete=models.PROTECT, related_name='pedicure', null=True, blank=True)
+    pedicure_color = models.ForeignKey(ManicureColor, verbose_name=_('Pedicure cor'), on_delete=models.PROTECT, related_name='pedicure', null=True, blank=True)
+    obs = models.TextField(_('Observações'), null=True, blank=True)
+
+
+    class Meta:
+        verbose_name = _('Estética e Manicure')
+        verbose_name_plural = _('Estética e Manicure')
