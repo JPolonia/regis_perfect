@@ -23,7 +23,7 @@
     }
   },
   "local": {
-    "code_src_directory": "~/Workspace/dev/regis_perfect",
+    "code_src_directory": "~/workspace/dev/regis_perfect",
     "venv_python_executable": "~/.virtualenvs/regis_perfect/bin/python"
   }
 }
