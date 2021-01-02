@@ -318,11 +318,11 @@ ADMIN_REORDER = (
     {'app': 'auth', 'label': 'Utilizadores', 'models': ({'model': 'auth.User', 'label': 'Profissionais'}, 'core.Client')},
     {'app': 'core', 'models': ('core.Service', 'core.ServiceType')},
 
-    {'app': 'core', 'label': 'Serviços', 'models': ('core.MaleHaircut', 'core.FemaleHaircut', 'core.Aesthetics')},
+    {'app': 'core', 'label': 'Serviços', 'models': ('core.MaleHaircut', 'core.FemaleHaircut', 'core.Aesthetics', 'core.Technical')},
 
     {'app': 'core', 'label': 'Corte Masculino', 'models': ('core.Laterals', 'core.Top', 'core.TopTechnique', 'core.HairStyle', 'core.Beard', 'core.Coloring', 'core.Locks', 'core.Straightening')},
     {'app': 'core', 'label': 'Corte Feminino', 'models': ('core.HaircutType', 'core.HaircutSize', 'core.Bangs', 'core.BangsSize')},
     {'app': 'core', 'label': 'Estética e Manicure', 'models': ('core.AestheticsType', 'core.BodyTreatment', 'core.EpilationProduct', 'core.EpilationZones', 'core.ManicureColor', 'core.ManicureProduct', 'core.ManicureService', 'core.Massage', 'core.SkinType')},
-
+    {'app': 'core', 'label': 'Técnicos', 'models': ('core.Coloring', 'core.Locks', 'core.Gloss', 'core.Straightening', 'core.Curling')},
       #'core',
 )

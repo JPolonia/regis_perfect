@@ -155,3 +155,15 @@ class ManicureColor(Choice):
         verbose_name = _('Manicure cor')
         verbose_name_plural = _('Manicure cores')
 
+
+# Technical
+class Gloss(Choice):
+    class Meta:
+        verbose_name = _('Gloss')
+        verbose_name_plural = _('Gloss')
+
+
+class Curling(Choice):
+    class Meta:
+        verbose_name = _('Ondulação')
+        verbose_name_plural = _('Ondulação')

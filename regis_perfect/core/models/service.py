@@ -134,3 +134,15 @@ class Aesthetics(Service):
     class Meta:
         verbose_name = _('Estética e Manicure')
         verbose_name_plural = _('Estética e Manicure')
+
+
+class Technical(Service):
+    coloring = models.ForeignKey(Coloring, verbose_name=_('Coloração'), on_delete=models.PROTECT, null=True, blank=True)
+    locks = models.ForeignKey(Locks, verbose_name=_('Madeixas'), on_delete=models.PROTECT, null=True, blank=True)
+    gloss = models.ForeignKey(Gloss, verbose_name=_('Gloss'), on_delete=models.PROTECT, null=True, blank=True)
+    straightening = models.ForeignKey(Straightening, verbose_name=_('Alisamento'), on_delete=models.PROTECT, null=True, blank=True)
+    curling = models.ForeignKey(Curling, verbose_name=_('Ondulação'), on_delete=models.PROTECT, null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Técnico')
+        verbose_name_plural = _('Técnicos')
